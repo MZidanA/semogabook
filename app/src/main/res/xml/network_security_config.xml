@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Izinkan cleartext hanya untuk host 10.10.8.252 -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">10.70.4.146</domain>
+    </domain-config>
+
+    <!-- Atau, jika mau global izin cleartext (tidak direkomendasikan): -->
+
+    <base-config cleartextTrafficPermitted="true" />
+
+</network-security-config>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+            android:allowBackup="true"
+            android:dataExtractionRules="@xml/data_extraction_rules"
+            android:fullBackupContent="@xml/backup_rules"
+            android:networkSecurityConfig="@xml/network_security_config"
+            android:usesCleartextTraffic="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.BooksForAll"
+
+        tools:targetApi="31">
+
+        <activity
+            android:name="com.insfinal.bookdforall.ui.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.insfinal.bookdforall.ui.LoginActivity"
+            android:exported="false" /> <activity
+        android:name="com.insfinal.bookdforall.ui.AdminActivity"
+        android:exported="false" />
+
+        <activity
+            android:name="com.insfinal.bookdforall.ui.MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.insfinal.bookdforall.ui.BookDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.insfinal.bookdforall.ui.PdfViewerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name="com.insfinal.bookdforall.ui.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.insfinal.bookdforall.ui.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.insfinal.bookdforall.ui.SetNewPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.insfinal.bookdforall.ui.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.insfinal.bookdforall.ui.EditProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.insfinal.bookdforall.ui.AddBookActivity"
+            android:exported="false" /> <activity
+        android:name="com.insfinal.bookdforall.ui.EditBookActivity"
+        android:exported="false" /> <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="${applicationId}.provider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/file_paths" />
+    </provider>
+
+    </application>
+
+</manifest>
